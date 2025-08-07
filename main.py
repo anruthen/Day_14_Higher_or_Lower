@@ -2,15 +2,15 @@ import game_data
 import random
 import art
 
-pick_a = random.choice(game_data.data)
-pick_b = random.choice(game_data.data)
-
 def display(a,b):
     print(f"Compare A: {a["name"]} a {a["description"]}, from {a["country"]}")
     print(art.vs)
-    print(f"Compare B: {b["name"]} a {b["description"]}, from {b["country"]}")
+    print(f"Against B: {b["name"]} a {b["description"]}, from {b["country"]}")
     u_pick = input("Who has more followers? Type 'A' or 'B': ").lower()
     return u_pick
+
+pick_a = random.choice(game_data.data)
+pick_b = random.choice(game_data.data)
 
 game_running = True
 score = 0
